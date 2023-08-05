@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+ <link  type= "text/css" rel="stylesheet" href="style4.css">
+
+</head>
+<body>
+    <div class="container" id="cv-form">
+    <h1 class="text-center my-2">Resume Generator</h1>
+    <p class="text-center">Build your Resume here..</p>
+<div class="row">
+  <div class="col-md-6">
+     <h3>Personal Information</h3>
+     <div class="form-group">
+        <label for="nameField">Your Name</label>
+        <input type="text"  id="nameField" placeholder="Enter here" class="form-control">
+     </div>
+     <div class="form-group mt-2">
+        <label for="contactField">Your Contact Number</label>
+        <input type="text"  id="contactField" placeholder="Enter here" class="form-control">
+     </div>
+     <div class="form-group mt-2">
+        <label for="addressfield">Your Address</label>
+        <textarea id="addressfield" placeholder="Enter here" class="form-control" rows="5"></textarea>
+        
+     </div>
+
+
+     <p class="text-secondary my-3">Important Links</p>
+     <div class="form-group mt-2">
+        <label for="fbField">Facebook</label>
+        <input type="text"  id="fbField" placeholder="Enter here" class="form-control">
+     </div>
+     <div class="form-group mt-2">
+        <label for="igField">Instagram</label>
+        <input type="text"  id="igField" placeholder="Enter here" class="form-control">
+     </div>
+     <div class="form-group mt-2">
+        <label for="linkField">LinkedIn</label>
+        <input type="text"  id="linkField" placeholder="Enter here" class="form-control">
+     </div>
+
+    </div>
+<div class="col-md-6">
+<h3>Professional Information</h3>
+<div class="form-group mt-2">
+    <label for="">Objective</label>
+    <textarea id="objectiveField" placeholder="Enter here" class="form-control weField" rows="5"></textarea>
+ </div>
+ <div class="form-group mt-2" id="we">
+    <label for="">Work Experience</label>
+    <textarea id="weField" placeholder="Enter here" class="form-control weField" rows="3"></textarea>
+
+    <div class="container text-center mt-2 " id ="weAddButton">
+       <!-- <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button> -->
+    </div>
+ </div>
+
+ <div class="form-group mt-2" id="aq">
+    <label for="">Academic Qualification</label>
+    <textarea id="eqField"  placeholder="Enter here" class="form-control eqField " rows="3"></textarea>
+    <div class="container text-center mt-2" id="aqAddButton">
+       <!-- <button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>-->
+    </div>
+ </div>
+</div>
+</div>
+<div class="container text-center mt-3">
+    <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+</div>
+</div>
+<!--cv-template-->
+<div class="container" id="cv-template">
+   <div class="row">
+         
+<div class="col-md-4 text-center py-5 background">
+   <!--first column-->
+   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0ZL7it9GAAc4a1Fb40d6fxu-paaRZ-zG2yQ&usqp=CAU" alt=""
+   class="img-fluid myimg"/>
+   
+
+   <div class="container">
+    <p id="nameT1">Name of the candidate</p>
+    <p id="contactT">Contact No</p>
+    <p id="addressT">Address</p>
+  <hr />
+  <p id="fbT"><a href="#1">https://www.facebook.com/LearnCodeWithDurgesh</a></p>
+  <p id="instaT"><a href="#1">https://www.instagram.com/harini_plain_vanilla</a></p>
+  <p id="linkedT"><a href="#1">https://www.LinkedIn.com/LearnCodeWithDurgesh</a></p>
+   </div>
+</div>
+<div class="col-md-8 py-5">
+    <!--second column-->
+    <h1 id="nameT2" class="text-center" style="font-weight:980">Name of the candidate</h1>
+    <div class="card mt-4">
+        <div class="card-header background">
+          <h3>
+            Objective
+          </h3>  
+        </div>
+        <div 
+        class="card-body">
+            <p id="objectiveT">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero excepturi in minima ea. Aut ullam dicta laudantium eveniet consequuntur saepe, laboriosam iste repellat minus. Aspernatur perferendis vel placeat culpa rem totam dolore molestias nulla ipsum perspiciatis, excepturi inventore facilis eos numquam obcaecati ducimus eius. Consequuntur quas enim reiciendis eligendi doloremque!</p>
+        </div>
+    </div>
+    <!--Work experience-->
+
+    <div class="card mt-4">
+        <div class="card-header background">
+          <h3>
+          Work Experience
+          </h3>  
+        </div>
+        <div class="card-body">
+            <p id="weT">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, ullam.\
+        </p>
+        </div>
+    </div>
+   <!--Academic-->
+   <div class="card mt-4">
+    <div class="card-header background">
+      <h3>
+     Academic Qualification
+      </h3>  
+    </div>
+    <div class="card-body">
+        <p id="aqT">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, ullam.
+        </p>
+    </div>
+</div>
+<div class="container mt-3 text-center">
+    <button onclick="printCV()" class="btn background">
+         Print CV
+    </button>
+</div>
+    </div>
+   </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="resume.js"></script>
+</body>
+</html>

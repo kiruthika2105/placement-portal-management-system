@@ -1,0 +1,17 @@
+body{
+    background-color: aliceblue;
+}
+.myimg{
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10;
+    width: 200px;
+
+}
+.background{
+    background-color: rgba(0,0,0,0.5);
+}
+a:hover{
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+  }
